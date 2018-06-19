@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    Name:
+    <input id="textInput" type="text" /> Hello World!
+    <script>
+        var count = 0;
+        var ele = document.getElementById('textInput');
+        ele.addEventListener('keyup', function () {
+            count++;
+            console.log('Key Pressed ' + count);
+        })
+    </script>
+</body>
+
+</html>
