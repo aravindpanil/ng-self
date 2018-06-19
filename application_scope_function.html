@@ -5,6 +5,9 @@
     <script>
         var myapp = angular.module("my-app", []);
         myapp.controller("my-controller", function ($scope) {
+            $scope.updateTime = function(){
+                $scope.data.time = new Date();
+            };
             window.onload = function () {
                 document.getElementById("jsbutton").addEventListener("click", function () {
                     console.log("JS Button clicked");
@@ -22,6 +25,8 @@
         {{data.time}}
         <br>
         <button id="jsbutton">JS Button</button>
+        <br>
+        <button ng-click="updateTime()">Angular Button</button>
     </div>
 </body>
 
