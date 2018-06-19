@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script>
+        var scope;
+        window.onload = function () {
+            document.getElementById("jsbutton").addEventListener("click", function () {
+                console.log("JS Button clicked");
+                scope = new Date();
+                display.innerHTML = scope;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <span id="display"></span> 
+        <br>
+        <button id="jsbutton">JS Button</button>
+    </div>
+</body>
+
+</html>
