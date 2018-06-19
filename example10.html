@@ -1,0 +1,43 @@
+<!--<html ng-app>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular.min.js"></script>
+    <script>
+        function Ctrl($scope){
+            $scope.one = "First";
+            $scope.two = "Second";
+        }
+    </script>
+</head>
+
+<body ng-controller="Ctrl">
+One: <input type="text" ng-model="one"/>
+<br>
+Two: <input type="text" ng-model="two"/>
+
+<br>
+
+</body>
+
+</html>
+!-->
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular.min.js"></script>
+    <script>
+      function NameCtrl($scope){
+        $scope.firstName = 'John';
+        $scope.lastName = 'Smith';
+      }
+    </script>
+  </head>
+  <body ng-controller="NameCtrl">
+    First name:<input ng-model="firstName" type="text"/>
+    <br>
+    Last name:<input ng-model="lastName" type="text"/>
+    <br>
+    Hello {{firstName}} {{lastName}}
+  </body>
+</html>
