@@ -1,21 +1,25 @@
-<html>
+<html ng-app="my-app">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.0/angular.min.js"></script>
     <script>
-        var scope;
-        window.onload = function () {
-            document.getElementById("jsbutton").addEventListener("click", function () {
-                console.log("JS Button clicked");
-                scope = new Date();
-                display.innerHTML = scope;
-            });
-        }
+        var myapp = angular.module("my-app", []);
+        myapp.controller("my-controller", function ($scope) {
+            window.onload = function () {
+                document.getElementById("jsbutton").addEventListener("click", function () {
+                    console.log("JS Button clicked");
+                    $scope.data = {time: new Date()};
+                });
+            }
+        })  ;
+
+
     </script>
 </head>
 
-<body>
+<body ng-controller="my-controller">
     <div>
-        <span id="display"></span> 
+        {{data.time}}
         <br>
         <button id="jsbutton">JS Button</button>
     </div>
