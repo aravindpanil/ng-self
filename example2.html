@@ -11,12 +11,16 @@
 <body>
     Name:
     <input id="textInput" type="text" /> Hello World!
+    <span id="span-text"></span>
     <script>
         var count = 0;
         var ele = document.getElementById('textInput');
+        var spanid = document.getElementById('span-text');
         ele.addEventListener('keyup', function () {
+            var text = document.getElementById('textInput').value;
             count++;
-            console.log('Key Pressed ' + count);
+            console.log(text + ' ' + count);
+            spanid.innerHTML = text;
         })
     </script>
 </body>
